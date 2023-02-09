@@ -2,10 +2,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Dashbroad from "./pages/Dashbroad";
 import Error from "./pages/Error";
 import Landing from "./pages/Landing";
 import Register from "./pages/Register";
+import 'react-toastify/dist/ReactToastify.css';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,9 +30,10 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-   <>
+    <>
       <RouterProvider router={router} />
-   </>
+      <ToastContainer position='top-center' ></ToastContainer>
+    </>
   );
 }
 
