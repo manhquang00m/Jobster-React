@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import Wrapper from "../assets/wrappers/RegisterPage";
 import { FormRow, Logo } from '../components';
 import { toast } from 'react-toastify';
+import { loginUser, registerUser } from '../features/user/userSlice';
 function Register() {
   const initialState = {
     name: "",
@@ -9,6 +11,8 @@ function Register() {
     password: "",
     isMember: true
   }
+  const dispatch = useDispatch();
+  const { isLoading, user } = useSelector((store) => store.user);
   const [value, setValue] = useState(initialState);
   const onSubmit = (e) => {
     e.preventDefault();
@@ -17,6 +21,11 @@ function Register() {
       toast.error('Please Fill Out All Fields');
       return;
     }
+    if (isMember) {
+      dispatch(loginUser({ email: email, password: password }));
+      return;
+    }
+    dispatch(registerUser({ name, email, password }));
   }
   const handleChange = (event) => {
     const newValue = { ...value }
