@@ -62,18 +62,32 @@ const Landing = () => {
   return (
     <main>
       <nav>
+<<<<<<< HEAD
         <img src={logo} alt="jobster logo" className="logo" />
       </nav>
       <div className="container page">
         {/* info */}
         <div className="info">
+=======
+        <img src={logo} alt='jobster logo' className='logo' />
+      </nav>
+      <div className='container page'>
+        {/* info */}
+        <div className='info'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
           <h1>
             job <span>tracking</span> app
           </h1>
           <p>some text</p>
+<<<<<<< HEAD
           <button className="btn btn-hero">Login/Register</button>
         </div>
         <img src={main} alt="job hunt" className="img main-img" />
+=======
+          <button className='btn btn-hero'>Login/Register</button>
+        </div>
+        <img src={main} alt='job hunt' className='img main-img' />
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       </div>
     </main>
   );
@@ -97,7 +111,11 @@ npm install styled-components
 ```
 
 ```js
+<<<<<<< HEAD
 import styled from "styled-components";
+=======
+import styled from 'styled-components';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const El = styled.el`
   // styles go here
@@ -146,10 +164,17 @@ const Component = () => {
 Logo.js
 
 ```js
+<<<<<<< HEAD
 import logo from "../assets/images/logo.svg";
 
 const Logo = () => {
   return <img src={logo} alt="jobify" className="logo" />;
+=======
+import logo from '../assets/images/logo.svg';
+
+const Logo = () => {
+  return <img src={logo} alt='jobify' className='logo' />;
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 };
 
 export default Logo;
@@ -178,17 +203,29 @@ npm install react-router-dom@6
 - import three components from router
 
 ```js
+<<<<<<< HEAD
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Error, Landing, Register, Dashboard } from "./pages";
+=======
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Error, Landing, Register, Dashboard } from './pages';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+<<<<<<< HEAD
         <Route path="/" element={<Dashboard />} />
         <Route path="landing" element={<Landing />} />
         <Route path="register" element={<Register />} />
         <Route path="*" element={<Error />} />
+=======
+        <Route path='/' element={<Dashboard />} />
+        <Route path='landing' element={<Landing />} />
+        <Route path='register' element={<Register />} />
+        <Route path='*' element={<Error />} />
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       </Routes>
     </BrowserRouter>
   );
@@ -198,10 +235,17 @@ function App() {
 - go to Landing.js
 
 ```js
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 
 return (
   <Link to="/register" className="btn btn-hero">
+=======
+import { Link } from 'react-router-dom';
+
+return (
+  <Link to='/register' className='btn btn-hero'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     Login / Register
   </Link>
 );
@@ -210,6 +254,7 @@ return (
 #### 14) Error Page
 
 ```js
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import img from "../assets/images/not-found.svg";
 import Wrapper from "../assets/wrappers/ErrorPage";
@@ -221,6 +266,19 @@ return (
       <h3>text</h3>
       <p>text</p>
       <Link to="/">back home</Link>
+=======
+import { Link } from 'react-router-dom';
+import img from '../assets/images/not-found.svg';
+import Wrapper from '../assets/wrappers/ErrorPage';
+
+return (
+  <Wrapper className='full-page'>
+    <div>
+      <img src={img} alt='not found' />
+      <h3>text</h3>
+      <p>text</p>
+      <Link to='/'>back home</Link>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     </div>
   </Wrapper>
 );
@@ -238,6 +296,7 @@ return (
 #### 16) Register Page - Setup
 
 ```js
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { Logo } from "../components";
 import Wrapper from "../assets/wrappers/RegisterPage";
@@ -247,6 +306,17 @@ const initialState = {
   name: "",
   email: "",
   password: "",
+=======
+import { useState, useEffect } from 'react';
+import { Logo } from '../components';
+import Wrapper from '../assets/wrappers/RegisterPage';
+// redux toolkit and useNavigate later
+
+const initialState = {
+  name: '',
+  email: '',
+  password: '',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   isMember: true,
 };
 // if possible prefer local state
@@ -266,18 +336,29 @@ function Register() {
     console.log(e.target);
   };
   return (
+<<<<<<< HEAD
     <Wrapper className="full-page">
       <form className="form" onSubmit={onSubmit}>
+=======
+    <Wrapper className='full-page'>
+      <form className='form' onSubmit={onSubmit}>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
         <Logo />
         <h3>Login</h3>
 
         {/* name field */}
+<<<<<<< HEAD
         <div className="form-row">
           <label htmlFor="name" className="form-label">
+=======
+        <div className='form-row'>
+          <label htmlFor='name' className='form-label'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             name
           </label>
 
           <input
+<<<<<<< HEAD
             type="text"
             value={values.name}
             name="name"
@@ -287,6 +368,17 @@ function Register() {
         </div>
 
         <button type="submit" className="btn btn-block">
+=======
+            type='text'
+            value={values.name}
+            name='name'
+            onChange={handleChange}
+            className='form-input'
+          />
+        </div>
+
+        <button type='submit' className='btn btn-block'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
           submit
         </button>
       </form>
@@ -300,6 +392,7 @@ function Register() {
 - index.js
 
 ```js
+<<<<<<< HEAD
 import React from "react";
 import { createRoot } from "react-dom/client";
 import "normalize.css";
@@ -309,6 +402,17 @@ import App from "./App";
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(<App tab="home" />);
+=======
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import 'normalize.css';
+import './index.css';
+import App from './App';
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App tab='home' />);
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 ```
 
 #### 18) FormRow Component
@@ -321,8 +425,13 @@ root.render(<App tab="home" />);
 ```js
 const FormRow = ({ type, name, value, handleChange, labelText }) => {
   return (
+<<<<<<< HEAD
     <div className="form-row">
       <label htmlFor={name} className="form-label">
+=======
+    <div className='form-row'>
+      <label htmlFor={name} className='form-label'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
         {labelText || name}
       </label>
 
@@ -331,7 +440,11 @@ const FormRow = ({ type, name, value, handleChange, labelText }) => {
         value={value}
         name={name}
         onChange={handleChange}
+<<<<<<< HEAD
         className="form-input"
+=======
+        className='form-input'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       />
     </div>
   );
@@ -351,14 +464,23 @@ return (
   <Wrapper>
     {/* control h3 */}
 
+<<<<<<< HEAD
     <h3>{values.isMember ? "Login" : "Register"}</h3>
+=======
+    <h3>{values.isMember ? 'Login' : 'Register'}</h3>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
     {/* toggle name */}
 
     {!values.isMember && (
       <FormRow
+<<<<<<< HEAD
         type="text"
         name="name"
+=======
+        type='text'
+        name='name'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
         value={values.name}
         handleChange={handleChange}
       />
@@ -368,10 +490,17 @@ return (
     {/* toggle button */}
 
     <p>
+<<<<<<< HEAD
       {values.isMember ? "Not a member yet?" : "Already a member?"}
 
       <button type="button" onClick={toggleMember} className="member-btn">
         {values.isMember ? "Register" : "Login"}
+=======
+      {values.isMember ? 'Not a member yet?' : 'Already a member?'}
+
+      <button type='button' onClick={toggleMember} className='member-btn'>
+        {values.isMember ? 'Register' : 'Login'}
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       </button>
     </p>
   </Wrapper>
@@ -396,7 +525,11 @@ const onSubmit = (e) => {
   e.preventDefault();
   const { name, email, password, isMember } = values;
   if (!email || !password || (!isMember && !name)) {
+<<<<<<< HEAD
     consol.log("Please Fill Out All Fields");
+=======
+    consol.log('Please Fill Out All Fields');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     return;
   }
 };
@@ -426,10 +559,17 @@ return </Routes>
 Register.js
 
 ```js
+<<<<<<< HEAD
 import { toast } from "react-toastify";
 
 if (!email || !password || (!isMember && !name)) {
   toast.error("Please Fill Out All Fields");
+=======
+import { toast } from 'react-toastify';
+
+if (!email || !password || (!isMember && !name)) {
+  toast.error('Please Fill Out All Fields');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   return;
 }
 ```
@@ -453,8 +593,13 @@ index.css
 - features/user/userSlice.js
 
 ```js
+<<<<<<< HEAD
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
+=======
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const initialState = {
   isLoading: false,
@@ -462,7 +607,11 @@ const initialState = {
 };
 
 const userSlice = createSlice({
+<<<<<<< HEAD
   name: "user",
+=======
+  name: 'user',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   initialState,
 });
 
@@ -472,9 +621,15 @@ export default userSlice.reducer;
 - create store.js
 
 ```js
+<<<<<<< HEAD
 import { configureStore } from "@reduxjs/toolkit";
 
 import userSlice from "./features/user/userSlice";
+=======
+import { configureStore } from '@reduxjs/toolkit';
+
+import userSlice from './features/user/userSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 export const store = configureStore({
   reducer: {
@@ -486,12 +641,21 @@ export const store = configureStore({
 - index.js
 
 ```js
+<<<<<<< HEAD
 import { store } from "./store";
 import { Provider } from "react-redux";
 
 root.render(
   <Provider store={store}>
     <App tab="home" />
+=======
+import { store } from './store';
+import { Provider } from 'react-redux';
+
+root.render(
+  <Provider store={store}>
+    <App tab='home' />
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   </Provider>
 );
 ```
@@ -604,10 +768,17 @@ npm install axios
 - utils/axios.js
 
 ```js
+<<<<<<< HEAD
 import axios from "axios";
 
 const customFetch = axios.create({
   baseURL: "https://jobify-prod.herokuapp.com/api/v1/toolkit",
+=======
+import axios from 'axios';
+
+const customFetch = axios.create({
+  baseURL: 'https://jobify-prod.herokuapp.com/api/v1/toolkit',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 });
 
 export default customFetch;
@@ -616,6 +787,7 @@ export default customFetch;
 userSlice.js
 
 ```js
+<<<<<<< HEAD
 import customFetch from "../../utils/axios";
 
 export const registerUser = createAsyncThunk(
@@ -623,6 +795,15 @@ export const registerUser = createAsyncThunk(
   async (user, thunkAPI) => {
     try {
       const resp = await customFetch.post("/auth/testingRegister", user);
+=======
+import customFetch from '../../utils/axios';
+
+export const registerUser = createAsyncThunk(
+  'user/registerUser',
+  async (user, thunkAPI) => {
+    try {
+      const resp = await customFetch.post('/auth/testingRegister', user);
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       console.log(resp);
     } catch (error) {
       console.log(error.response);
@@ -762,6 +943,7 @@ export const loginUser = createAsyncThunk(
 
 ```js
 export const addUserToLocalStorage = (user) => {
+<<<<<<< HEAD
   localStorage.setItem("user", JSON.stringify(user));
 };
 
@@ -771,6 +953,17 @@ export const removeUserFromLocalStorage = () => {
 
 export const getUserFromLocalStorage = () => {
   const result = localStorage.getItem("user");
+=======
+  localStorage.setItem('user', JSON.stringify(user));
+};
+
+export const removeUserFromLocalStorage = () => {
+  localStorage.removeItem('user');
+};
+
+export const getUserFromLocalStorage = () => {
+  const result = localStorage.getItem('user');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   const user = result ? JSON.parse(result) : null;
   return user;
 };
@@ -807,7 +1000,11 @@ const initialState = {
 Register.js
 
 ```js
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
+=======
+import { useNavigate } from 'react-router-dom';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const Register = () => {
   const navigate = useNavigate();
@@ -815,7 +1012,11 @@ const Register = () => {
   useEffect(() => {
     if (user) {
       setTimeout(() => {
+<<<<<<< HEAD
         navigate("/");
+=======
+        navigate('/');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       }, 3000);
     }
   }, [user, navigate]);
@@ -838,12 +1039,17 @@ import {
   SharedLayout,
   Stats,
   AddJob,
+<<<<<<< HEAD
 } from "./pages/dashboard";
+=======
+} from './pages/dashboard';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+<<<<<<< HEAD
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Stats />} />
           <Route path="all-jobs" element={<AllJobs />} />
@@ -855,6 +1061,19 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
       <ToastContainer position="top-center" />
+=======
+        <Route path='/' element={<SharedLayout />}>
+          <Route index element={<Stats />} />
+          <Route path='all-jobs' element={<AllJobs />} />
+          <Route path='add-job' element={<AddJob />} />
+          <Route path='profile' element={<Profile />} />
+        </Route>
+        <Route path='register' element={<Register />} />
+        <Route path='landing' element={<Landing />} />
+        <Route path='*' element={<Error />} />
+      </Routes>
+      <ToastContainer position='top-center' />
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     </BrowserRouter>
   );
 }
@@ -870,20 +1089,34 @@ function App() {
 ```js
 SharedLayout.js;
 
+<<<<<<< HEAD
 import { Outlet } from "react-router-dom";
 import { Navbar, SmallSidebar, BigSidebar } from "../../components";
 import Wrapper from "../../assets/wrappers/SharedLayout";
+=======
+import { Outlet } from 'react-router-dom';
+import { Navbar, SmallSidebar, BigSidebar } from '../../components';
+import Wrapper from '../../assets/wrappers/SharedLayout';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const SharedLayout = () => {
   return (
     <>
       <Wrapper>
+<<<<<<< HEAD
         <main className="dashboard">
+=======
+        <main className='dashboard'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
           <SmallSidebar />
           <BigSidebar />
           <div>
             <Navbar />
+<<<<<<< HEAD
             <div className="dashboard-page">
+=======
+            <div className='dashboard-page'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
               <Outlet />
             </div>
           </div>
@@ -931,12 +1164,21 @@ export default Navbar
 Navbar.js;
 
 ```js
+<<<<<<< HEAD
 import Wrapper from "../assets/wrappers/Navbar";
 import { FaAlignLeft, FaUserCircle, FaCaretDown } from "react-icons/fa";
 import Logo from "./Logo";
 import { useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
+=======
+import Wrapper from '../assets/wrappers/Navbar';
+import { FaAlignLeft, FaUserCircle, FaCaretDown } from 'react-icons/fa';
+import Logo from './Logo';
+import { useState } from 'react';
+
+import { useDispatch, useSelector } from 'react-redux';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const Navbar = () => {
   const { user } = useSelector((store) => store.user);
@@ -944,16 +1186,25 @@ const Navbar = () => {
 
   return (
     <Wrapper>
+<<<<<<< HEAD
       <div className="nav-center">
         <button
           type="button"
           className="toggle-btn"
           onClick={() => console.log("toggle sidebar")}
+=======
+      <div className='nav-center'>
+        <button
+          type='button'
+          className='toggle-btn'
+          onClick={() => console.log('toggle sidebar')}
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
         >
           <FaAlignLeft />
         </button>
         <div>
           <Logo />
+<<<<<<< HEAD
           <h3 className="logo-text">dashboard</h3>
         </div>
         <div className="btn-container">
@@ -961,17 +1212,35 @@ const Navbar = () => {
             type="button"
             className="btn"
             onClick={() => console.log("toggle logout dropdown")}
+=======
+          <h3 className='logo-text'>dashboard</h3>
+        </div>
+        <div className='btn-container'>
+          <button
+            type='button'
+            className='btn'
+            onClick={() => console.log('toggle logout dropdown')}
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
           >
             <FaUserCircle />
             {user?.name}
             <FaCaretDown />
           </button>
+<<<<<<< HEAD
           <div className="dropdown show-dropdown">
             <button
               type="button"
               className="dropdown-btn"
               onClick={() => {
                 console.log("logout user");
+=======
+          <div className='dropdown show-dropdown'>
+            <button
+              type='button'
+              className='dropdown-btn'
+              onClick={() => {
+                console.log('logout user');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
               }}
             >
               logout
@@ -1010,13 +1279,21 @@ export const { toggleSidebar } = userSlice.actions;
 Navbar.js
 
 ```js
+<<<<<<< HEAD
 import { toggleSidebar } from "../features/user/userSlice";
+=======
+import { toggleSidebar } from '../features/user/userSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const toggle = () => {
   dispatch(toggleSidebar());
 };
 
+<<<<<<< HEAD
 <button type="button" className="toggle-btn" onClick={toggle}>
+=======
+<button type='button' className='toggle-btn' onClick={toggle}>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   <FaAlignLeft />
 </button>;
 ```
@@ -1066,12 +1343,21 @@ export const { logoutUser, toggleSidebar } = userSlice.actions;
 Navbar.js
 
 ```js
+<<<<<<< HEAD
 import { toggleSidebar, logoutUser } from "../features/user/userSlice";
 
 <div className={showLogout ? "dropdown show-dropdown" : "dropdown"}>
   <button
     type="button"
     className="dropdown-btn"
+=======
+import { toggleSidebar, logoutUser } from '../features/user/userSlice';
+
+<div className={showLogout ? 'dropdown show-dropdown' : 'dropdown'}>
+  <button
+    type='button'
+    className='dropdown-btn'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     onClick={() => {
       dispatch(logoutUser());
     }}
@@ -1086,12 +1372,21 @@ import { toggleSidebar, logoutUser } from "../features/user/userSlice";
 - pages/ProtectedRoute.js
 
 ```js
+<<<<<<< HEAD
 import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 const ProtectedRoute = ({ children }) => {
   const { user } = useSelector((store) => store.user);
   if (!user) {
     return <Navigate to="/landing" />;
+=======
+import { Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+const ProtectedRoute = ({ children }) => {
+  const { user } = useSelector((store) => store.user);
+  if (!user) {
+    return <Navigate to='/landing' />;
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   }
   return children;
 };
@@ -1103,7 +1398,11 @@ App.js
 
 ```js
 <Route
+<<<<<<< HEAD
   path="/"
+=======
+  path='/'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   element={
     <ProtectedRoute>
       <SharedLayout />
@@ -1119,24 +1418,42 @@ App.js
 ```js
 SmallSidebar.js;
 
+<<<<<<< HEAD
 import Wrapper from "../assets/wrappers/SmallSidebar";
 import { FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import { useSelector, useDispatch } from "react-redux";
+=======
+import Wrapper from '../assets/wrappers/SmallSidebar';
+import { FaTimes } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
+import Logo from './Logo';
+import { useSelector, useDispatch } from 'react-redux';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 export const SmallSidebar = () => {
   return (
     <Wrapper>
+<<<<<<< HEAD
       <div className="sidebar-container show-sidebar">
         <div className="content">
           <button className="close-btn" onClick={() => console.log("toggle")}>
+=======
+      <div className='sidebar-container show-sidebar'>
+        <div className='content'>
+          <button className='close-btn' onClick={() => console.log('toggle')}>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             <FaTimes />
           </button>
           <header>
             <Logo />
           </header>
+<<<<<<< HEAD
           <div className="nav-links">nav links</div>
+=======
+          <div className='nav-links'>nav links</div>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
         </div>
       </div>
     </Wrapper>
@@ -1175,34 +1492,61 @@ return (
 - create utils/links.js
 
 ```js
+<<<<<<< HEAD
 import { IoBarChartSharp } from "react-icons/io5";
 import { MdQueryStats } from "react-icons/md";
 import { FaWpforms } from "react-icons/fa";
 import { ImProfile } from "react-icons/im";
+=======
+import { IoBarChartSharp } from 'react-icons/io5';
+import { MdQueryStats } from 'react-icons/md';
+import { FaWpforms } from 'react-icons/fa';
+import { ImProfile } from 'react-icons/im';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const links = [
   {
     id: 1,
+<<<<<<< HEAD
     text: "stats",
     path: "/",
+=======
+    text: 'stats',
+    path: '/',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     icon: <IoBarChartSharp />,
   },
   {
     id: 2,
+<<<<<<< HEAD
     text: "all jobs",
     path: "all-jobs",
+=======
+    text: 'all jobs',
+    path: 'all-jobs',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     icon: <MdQueryStats />,
   },
   {
     id: 3,
+<<<<<<< HEAD
     text: "add job",
     path: "add-job",
+=======
+    text: 'add job',
+    path: 'add-job',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     icon: <FaWpforms />,
   },
   {
     id: 4,
+<<<<<<< HEAD
     text: "profile",
     path: "profile",
+=======
+    text: 'profile',
+    path: 'profile',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     icon: <ImProfile />,
   },
 ];
@@ -1215,10 +1559,17 @@ export default links;
 SmallSidebar.js
 
 ```js
+<<<<<<< HEAD
 import { NavLink } from "react-router-dom";
 
 return (
   <div className="nav-links">
+=======
+import { NavLink } from 'react-router-dom';
+
+return (
+  <div className='nav-links'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     {links.map((link) => {
       const { text, path, id, icon } = link;
 
@@ -1226,12 +1577,20 @@ return (
         <NavLink
           to={path}
           className={({ isActive }) =>
+<<<<<<< HEAD
             isActive ? "nav-link active" : "nav-link"
+=======
+            isActive ? 'nav-link active' : 'nav-link'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
           }
           key={id}
           onClick={toggle}
         >
+<<<<<<< HEAD
           <span className="icon">{icon}</span>
+=======
+          <span className='icon'>{icon}</span>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
           {text}
         </NavLink>
       );
@@ -1264,12 +1623,21 @@ end
 - also can setup in links.js, preference
 
 ```js
+<<<<<<< HEAD
 import { NavLink } from "react-router-dom";
 import links from "../utils/links";
 
 const NavLinks = ({ toggleSidebar }) => {
   return (
     <div className="nav-links">
+=======
+import { NavLink } from 'react-router-dom';
+import links from '../utils/links';
+
+const NavLinks = ({ toggleSidebar }) => {
+  return (
+    <div className='nav-links'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       {links.map((link) => {
         const { text, path, id, icon } = link;
 
@@ -1279,10 +1647,17 @@ const NavLinks = ({ toggleSidebar }) => {
             key={id}
             onClick={toggleSidebar}
             className={({ isActive }) =>
+<<<<<<< HEAD
               isActive ? "nav-link active" : "nav-link"
             }
           >
             <span className="icon">{icon}</span>
+=======
+              isActive ? 'nav-link active' : 'nav-link'
+            }
+          >
+            <span className='icon'>{icon}</span>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             {text}
           </NavLink>
         );
@@ -1297,7 +1672,11 @@ export default NavLinks;
 ```js
 SmallSidebar.js;
 
+<<<<<<< HEAD
 import NavLinks from "./NavLinks";
+=======
+import NavLinks from './NavLinks';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 return <NavLinks toggleSidebar={toggle} />;
 ```
@@ -1305,10 +1684,17 @@ return <NavLinks toggleSidebar={toggle} />;
 #### 45) Big Sidebar
 
 ```js
+<<<<<<< HEAD
 import NavLinks from "./NavLinks";
 import Logo from "../components/Logo";
 import Wrapper from "../assets/wrappers/BigSidebar";
 import { useSelector } from "react-redux";
+=======
+import NavLinks from './NavLinks';
+import Logo from '../components/Logo';
+import Wrapper from '../assets/wrappers/BigSidebar';
+import { useSelector } from 'react-redux';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const BigSidebar = () => {
   const { isSidebarOpen } = useSelector((store) => store.user);
@@ -1317,11 +1703,19 @@ const BigSidebar = () => {
       <div
         className={
           isSidebarOpen
+<<<<<<< HEAD
             ? "sidebar-container "
             : "sidebar-container show-sidebar"
         }
       >
         <div className="content">
+=======
+            ? 'sidebar-container '
+            : 'sidebar-container show-sidebar'
+        }
+      >
+        <div className='content'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
           <header>
             <Logo />
           </header>
@@ -1466,14 +1860,22 @@ export const updateUser = createAsyncThunk(
 Profile.js
 
 ```js
+<<<<<<< HEAD
 import { updateUser } from "../../features/user/userSlice";
+=======
+import { updateUser } from '../../features/user/userSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const handleSubmit = (e) => {
   e.preventDefault();
   const { name, email, lastName, location } = userData;
 
   if (!name || !email || !lastName || !location) {
+<<<<<<< HEAD
     toast.error("Please Fill Out All Fields");
+=======
+    toast.error('Please Fill Out All Fields');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     return;
   }
   dispatch(updateUser({ name, email, lastName, location }));
@@ -1522,9 +1924,15 @@ logoutUser: (state) => {
 - features/user/userThunk.js
 
 ```js
+<<<<<<< HEAD
 import customFetch from "../../utils/axios";
 
 import { logoutUser } from "./userSlice";
+=======
+import customFetch from '../../utils/axios';
+
+import { logoutUser } from './userSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 export const registerUserThunk = async (url, user, thunkAPI) => {
   try {
@@ -1556,7 +1964,11 @@ export const updateUserThunk = async (url, user, thunkAPI) => {
     // console.log(error.response);
     if (error.response.status === 401) {
       thunkAPI.dispatch(logoutUser());
+<<<<<<< HEAD
       return thunkAPI.rejectWithValue("Unauthorized! Logging Out...");
+=======
+      return thunkAPI.rejectWithValue('Unauthorized! Logging Out...');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     }
     return thunkAPI.rejectWithValue(error.response.data.msg);
   }
@@ -1570,16 +1982,26 @@ import {
   loginUserThunk,
   registerUserThunk,
   updateUserThunk,
+<<<<<<< HEAD
 } from "./userThunk";
 
 export const registerUser = createAsyncThunk(
   "user/registerUser",
   async (user, thunkAPI) => {
     return registerUserThunk("/auth/register", user, thunkAPI);
+=======
+} from './userThunk';
+
+export const registerUser = createAsyncThunk(
+  'user/registerUser',
+  async (user, thunkAPI) => {
+    return registerUserThunk('/auth/register', user, thunkAPI);
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   }
 );
 
 export const loginUser = createAsyncThunk(
+<<<<<<< HEAD
   "user/loginUser",
   async (user, thunkAPI) => {
     return loginUserThunk("/auth/login", user, thunkAPI);
@@ -1589,6 +2011,17 @@ export const updateUser = createAsyncThunk(
   "user/updateUser",
   async (user, thunkAPI) => {
     return updateUserThunk("/auth/updateUser", user, thunkAPI);
+=======
+  'user/loginUser',
+  async (user, thunkAPI) => {
+    return loginUserThunk('/auth/login', user, thunkAPI);
+  }
+);
+export const updateUser = createAsyncThunk(
+  'user/updateUser',
+  async (user, thunkAPI) => {
+    return updateUserThunk('/auth/updateUser', user, thunkAPI);
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   }
 );
 ```
@@ -1598,6 +2031,7 @@ export const updateUser = createAsyncThunk(
 - features/job/jobSlice.js
 
 ```js
+<<<<<<< HEAD
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 import customFetch from "../../utils/axios";
@@ -1618,6 +2052,28 @@ const initialState = {
 
 const jobSlice = createSlice({
   name: "job",
+=======
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
+import customFetch from '../../utils/axios';
+import { getUserFromLocalStorage } from '../../utils/localStorage';
+
+const initialState = {
+  isLoading: false,
+  position: '',
+  company: '',
+  jobLocation: '',
+  jobTypeOptions: ['full-time', 'part-time', 'remote', 'internship'],
+  jobType: 'full-time',
+  statusOptions: ['interview', 'declined', 'pending'],
+  status: 'pending',
+  isEditing: false,
+  editJobId: '',
+};
+
+const jobSlice = createSlice({
+  name: 'job',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   initialState,
 });
 
@@ -1627,7 +2083,11 @@ export default jobSlice.reducer;
 store.js
 
 ```js
+<<<<<<< HEAD
 import jobSlice from "./features/job/jobSlice";
+=======
+import jobSlice from './features/job/jobSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 export const store = configureStore({
   reducer: {
@@ -1642,10 +2102,17 @@ export const store = configureStore({
 AddJob.js
 
 ```js
+<<<<<<< HEAD
 import { FormRow } from "../../components";
 import Wrapper from "../../assets/wrappers/DashboardFormPage";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
+=======
+import { FormRow } from '../../components';
+import Wrapper from '../../assets/wrappers/DashboardFormPage';
+import { useSelector, useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const AddJob = () => {
   const {
@@ -1666,7 +2133,11 @@ const AddJob = () => {
     e.preventDefault();
 
     if (!position || !company || !jobLocation) {
+<<<<<<< HEAD
       toast.error("Please Fill Out All Fields");
+=======
+      toast.error('Please Fill Out All Fields');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       return;
     }
   };
@@ -1677,6 +2148,7 @@ const AddJob = () => {
 
   return (
     <Wrapper>
+<<<<<<< HEAD
       <form className="form">
         <h3>{isEditing ? "edit job" : "add job"}</h3>
 
@@ -1685,21 +2157,42 @@ const AddJob = () => {
           <FormRow
             type="text"
             name="position"
+=======
+      <form className='form'>
+        <h3>{isEditing ? 'edit job' : 'add job'}</h3>
+
+        <div className='form-center'>
+          {/* position */}
+          <FormRow
+            type='text'
+            name='position'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             value={position}
             handleChange={handleJobInput}
           />
           {/* company */}
           <FormRow
+<<<<<<< HEAD
             type="text"
             name="company"
+=======
+            type='text'
+            name='company'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             value={company}
             handleChange={handleJobInput}
           />
           {/* location */}
           <FormRow
+<<<<<<< HEAD
             type="text"
             labelText="job location"
             name="jobLocation"
+=======
+            type='text'
+            labelText='job location'
+            name='jobLocation'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             value={jobLocation}
             handleChange={handleJobInput}
           />
@@ -1708,17 +2201,30 @@ const AddJob = () => {
           {/* job type */}
 
           {/* btn container */}
+<<<<<<< HEAD
           <div className="btn-container">
             <button
               type="button"
               className="btn btn-block clear-btn"
               onClick={() => console.log("clear values")}
+=======
+          <div className='btn-container'>
+            <button
+              type='button'
+              className='btn btn-block clear-btn'
+              onClick={() => console.log('clear values')}
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             >
               clear
             </button>
             <button
+<<<<<<< HEAD
               type="submit"
               className="btn btn-block submit-btn"
+=======
+              type='submit'
+              className='btn btn-block submit-btn'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
               onClick={handleSubmit}
               disabled={isLoading}
             >
@@ -1740,6 +2246,7 @@ export default AddJob;
 // job status
 
 return (
+<<<<<<< HEAD
   <div className="form-row">
     <label htmlFor="status" className="form-label">
       status
@@ -1749,6 +2256,17 @@ return (
       value={status}
       onChange={handleJobInput}
       className="form-select"
+=======
+  <div className='form-row'>
+    <label htmlFor='status' className='form-label'>
+      status
+    </label>
+    <select
+      name='status'
+      value={status}
+      onChange={handleJobInput}
+      className='form-select'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     >
       {statusOptions.map((itemValue, index) => {
         return (
@@ -1767,8 +2285,13 @@ return (
 ```js
 const FormRowSelect = ({ labelText, name, value, handleChange, list }) => {
   return (
+<<<<<<< HEAD
     <div className="form-row">
       <label htmlFor={name} className="form-label">
+=======
+    <div className='form-row'>
+      <label htmlFor={name} className='form-label'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
         {labelText || name}
       </label>
       <select
@@ -1776,7 +2299,11 @@ const FormRowSelect = ({ labelText, name, value, handleChange, list }) => {
         value={value}
         id={name}
         onChange={handleChange}
+<<<<<<< HEAD
         className="form-select"
+=======
+        className='form-select'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       >
         {list.map((itemValue, index) => {
           return (
@@ -1830,7 +2357,11 @@ export const { handleChange } = jobSlice.actions;
 AddJob.js
 
 ```js
+<<<<<<< HEAD
 import { handleChange } from "../../features/job/jobSlice";
+=======
+import { handleChange } from '../../features/job/jobSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const handleJobInput = (e) => {
   const name = e.target.name;
@@ -1859,12 +2390,21 @@ export const { handleChange, clearValues } = jobSlice.actions;
 AddJob.js
 
 ```js
+<<<<<<< HEAD
 import { clearValues, handleChange } from "../../features/job/jobSlice";
 
 return (
   <button
     type="button"
     className="btn btn-block clear-btn"
+=======
+import { clearValues, handleChange } from '../../features/job/jobSlice';
+
+return (
+  <button
+    type='button'
+    className='btn btn-block clear-btn'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     onClick={() => dispatch(clearValues())}
   >
     clear
@@ -1928,13 +2468,21 @@ import {
   clearValues,
   handleChange,
   createJob,
+<<<<<<< HEAD
 } from "../../features/job/jobSlice";
+=======
+} from '../../features/job/jobSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const handleSubmit = (e) => {
   e.preventDefault();
 
   if (!position || !company || !jobLocation) {
+<<<<<<< HEAD
     toast.error("Please Fill Out All Fields");
+=======
+    toast.error('Please Fill Out All Fields');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     return;
   }
 
@@ -1952,7 +2500,11 @@ const { user } = useSelector((store) => store.user);
 useEffect(() => {
   // eventually will check for isEditing
   if (!isEditing) {
+<<<<<<< HEAD
     dispatch(handleChange({ name: "jobLocation", value: user.location }));
+=======
+    dispatch(handleChange({ name: 'jobLocation', value: user.location }));
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   }
 }, []);
 ```
@@ -1990,9 +2542,15 @@ Navbar.js
 
 ```js
 <button
+<<<<<<< HEAD
   type="button"
   className="dropdown-btn"
   onClick={() => dispatch(logoutUser("Logging out..."))}
+=======
+  type='button'
+  className='dropdown-btn'
+  onClick={() => dispatch(logoutUser('Logging out...'))}
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 >
   logout
 </button>
@@ -2003,6 +2561,7 @@ Navbar.js
 - features/allJobs/allJobsSlice.js
 
 ```js
+<<<<<<< HEAD
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 import customFetch from "../../utils/axios";
@@ -2013,6 +2572,18 @@ const initialFiltersState = {
   searchType: "all",
   sort: "latest",
   sortOptions: ["latest", "oldest", "a-z", "z-a"],
+=======
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
+import customFetch from '../../utils/axios';
+
+const initialFiltersState = {
+  search: '',
+  searchStatus: 'all',
+  searchType: 'all',
+  sort: 'latest',
+  sortOptions: ['latest', 'oldest', 'a-z', 'z-a'],
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 };
 
 const initialState = {
@@ -2027,7 +2598,11 @@ const initialState = {
 };
 
 const allJobsSlice = createSlice({
+<<<<<<< HEAD
   name: "allJobs",
+=======
+  name: 'allJobs',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   initialState,
 });
 
@@ -2037,11 +2612,19 @@ export default allJobsSlice.reducer;
 store.js
 
 ```js
+<<<<<<< HEAD
 import { configureStore } from "@reduxjs/toolkit";
 
 import userSlice from "./features/user/userSlice";
 import jobSlice from "./features/job/jobSlice";
 import allJobsSlice from "./features/allJobs/allJobsSlice";
+=======
+import { configureStore } from '@reduxjs/toolkit';
+
+import userSlice from './features/user/userSlice';
+import jobSlice from './features/job/jobSlice';
+import allJobsSlice from './features/allJobs/allJobsSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 export const store = configureStore({
   reducer: {
@@ -2063,7 +2646,11 @@ export const store = configureStore({
 AllJobs.js
 
 ```js
+<<<<<<< HEAD
 import { JobsContainer, SearchContainer } from "../../components";
+=======
+import { JobsContainer, SearchContainer } from '../../components';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const AllJobs = () => {
   return (
@@ -2080,10 +2667,17 @@ export default AllJobs;
 #### 60) JobsContainer.js
 
 ```js
+<<<<<<< HEAD
 import { useEffect } from "react";
 import Job from "./Job";
 import Wrapper from "../assets/wrappers/JobsContainer";
 import { useSelector, useDispatch } from "react-redux";
+=======
+import { useEffect } from 'react';
+import Job from './Job';
+import Wrapper from '../assets/wrappers/JobsContainer';
+import { useSelector, useDispatch } from 'react-redux';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const JobsContainer = () => {
   const { jobs, isLoading } = useSelector((store) => store.allJobs);
@@ -2108,7 +2702,11 @@ const JobsContainer = () => {
   return (
     <Wrapper>
       <h5>jobs info</h5>
+<<<<<<< HEAD
       <div className="jobs">
+=======
+      <div className='jobs'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
         {jobs.map((job) => {
           return <Job key={job._id} {...job} />;
         })}
@@ -2126,7 +2724,11 @@ Loading.js
 
 ```js
 const Loading = ({ center }) => {
+<<<<<<< HEAD
   return <div className={center ? "loading loading-center" : "loading"}></div>;
+=======
+  return <div className={center ? 'loading loading-center' : 'loading'}></div>;
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 };
 
 export default Loading;
@@ -2135,7 +2737,11 @@ export default Loading;
 JobsContainer.js
 
 ```js
+<<<<<<< HEAD
 import Loading from "./Loading";
+=======
+import Loading from './Loading';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 if (isLoading) {
   return <Loading center />;
@@ -2191,7 +2797,11 @@ extraReducers: {
 JobsContainer.js
 
 ```js
+<<<<<<< HEAD
 import { getAllJobs } from "../features/allJobs/allJobsSlice";
+=======
+import { getAllJobs } from '../features/allJobs/allJobsSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 useEffect(() => {
   dispatch(getAllJobs());
@@ -2203,10 +2813,17 @@ useEffect(() => {
 Job.js
 
 ```js
+<<<<<<< HEAD
 import { FaLocationArrow, FaBriefcase, FaCalendarAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Wrapper from "../assets/wrappers/Job";
 import { useDispatch } from "react-redux";
+=======
+import { FaLocationArrow, FaBriefcase, FaCalendarAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import Wrapper from '../assets/wrappers/Job';
+import { useDispatch } from 'react-redux';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const Job = ({
   _id,
@@ -2222,33 +2839,59 @@ const Job = ({
   return (
     <Wrapper>
       <header>
+<<<<<<< HEAD
         <div className="main-icon">{company.charAt(0)}</div>
         <div className="info">
+=======
+        <div className='main-icon'>{company.charAt(0)}</div>
+        <div className='info'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
           <h5>{position}</h5>
           <p>{company}</p>
         </div>
       </header>
+<<<<<<< HEAD
       <div className="content">
         <div className="content-center">
+=======
+      <div className='content'>
+        <div className='content-center'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
           <h4>more content</h4>
           <div className={`status ${status}`}>{status}</div>
         </div>
         <footer>
+<<<<<<< HEAD
           <div className="actions">
             <Link
               to="/add-job"
               className="btn edit-btn"
               onClick={() => {
                 console.log("edit job");
+=======
+          <div className='actions'>
+            <Link
+              to='/add-job'
+              className='btn edit-btn'
+              onClick={() => {
+                console.log('edit job');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
               }}
             >
               Edit
             </Link>
             <button
+<<<<<<< HEAD
               type="button"
               className="btn delete-btn"
               onClick={() => {
                 console.log("delete  job");
+=======
+              type='button'
+              className='btn delete-btn'
+              onClick={() => {
+                console.log('delete  job');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
               }}
             >
               Delete
@@ -2268,13 +2911,22 @@ export default Job;
 - components/JobInfo.js
 
 ```js
+<<<<<<< HEAD
 import Wrapper from "../assets/wrappers/JobInfo";
+=======
+import Wrapper from '../assets/wrappers/JobInfo';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const JobInfo = ({ icon, text }) => {
   return (
     <Wrapper>
+<<<<<<< HEAD
       <span className="icon">{icon}</span>
       <span className="text">{text}</span>
+=======
+      <span className='icon'>{icon}</span>
+      <span className='text'>{text}</span>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     </Wrapper>
   );
 };
@@ -2308,7 +2960,11 @@ npm install moment
 Job.js
 
 ```js
+<<<<<<< HEAD
 const date = moment(createdAt).format("MMM Do, YYYY");
+=======
+const date = moment(createdAt).format('MMM Do, YYYY');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 ```
 
 #### 65) Toggle Loading in AllJobs
@@ -2339,10 +2995,17 @@ export const {
 jobSlice.js
 
 ```js
+<<<<<<< HEAD
 import { showLoading, hideLoading, getAllJobs } from "../allJobs/allJobsSlice";
 
 export const deleteJob = createAsyncThunk(
   "job/deleteJob",
+=======
+import { showLoading, hideLoading, getAllJobs } from '../allJobs/allJobsSlice';
+
+export const deleteJob = createAsyncThunk(
+  'job/deleteJob',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   async (jobId, thunkAPI) => {
     thunkAPI.dispatch(showLoading());
     try {
@@ -2365,8 +3028,13 @@ Job.js
 
 ```js
 <button
+<<<<<<< HEAD
   type="button"
   className="btn delete-btn"
+=======
+  type='button'
+  className='btn delete-btn'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   onClick={() => {
     dispatch(deleteJob(_id));
   }}
@@ -2394,11 +3062,19 @@ reducers:{
 Job.js
 
 ```js
+<<<<<<< HEAD
 import { setEditJob, deleteJob } from "../features/job/jobSlice";
 
 <Link
   to="/add-job"
   className="btn edit-btn"
+=======
+import { setEditJob, deleteJob } from '../features/job/jobSlice';
+
+<Link
+  to='/add-job'
+  className='btn edit-btn'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   onClick={() => {
     dispatch(
       setEditJob({
@@ -2421,7 +3097,11 @@ AddJob.js
 ```js
 useEffect(() => {
   if (!isEditing) {
+<<<<<<< HEAD
     dispatch(handleChange({ name: "jobLocation", value: user.location }));
+=======
+    dispatch(handleChange({ name: 'jobLocation', value: user.location }));
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   }
 }, []);
 ```
@@ -2477,7 +3157,11 @@ import {
   handleChange,
   createJob,
   editJob,
+<<<<<<< HEAD
 } from "../../features/job/jobSlice";
+=======
+} from '../../features/job/jobSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 if (isEditing) {
   dispatch(
@@ -2501,6 +3185,7 @@ if (isEditing) {
 - features/job/jobThunk.js
 
 ```js
+<<<<<<< HEAD
 import customFetch from "../../utils/axios";
 import { showLoading, hideLoading, getAllJobs } from "../allJobs/allJobsSlice";
 import { clearValues } from "./jobSlice";
@@ -2508,6 +3193,15 @@ import { clearValues } from "./jobSlice";
 export const createJobThunk = async (job, thunkAPI) => {
   try {
     const resp = await customFetch.post("/jobs", job, {
+=======
+import customFetch from '../../utils/axios';
+import { showLoading, hideLoading, getAllJobs } from '../allJobs/allJobsSlice';
+import { clearValues } from './jobSlice';
+
+export const createJobThunk = async (job, thunkAPI) => {
+  try {
+    const resp = await customFetch.post('/jobs', job, {
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       headers: {
         authorization: `Bearer ${thunkAPI.getState().user.user.token}`,
       },
@@ -2553,6 +3247,7 @@ export const editJobThunk = async ({ jobId, job }, thunkAPI) => {
 jobSlice.js
 
 ```js
+<<<<<<< HEAD
 import { createJobThunk, deleteJobThunk, editJobThunk } from "./jobThunk";
 
 export const createJob = createAsyncThunk("job/createJob", createJobThunk);
@@ -2560,6 +3255,15 @@ export const createJob = createAsyncThunk("job/createJob", createJobThunk);
 export const deleteJob = createAsyncThunk("job/deleteJob", deleteJobThunk);
 
 export const editJob = createAsyncThunk("job/editJob", editJobThunk);
+=======
+import { createJobThunk, deleteJobThunk, editJobThunk } from './jobThunk';
+
+export const createJob = createAsyncThunk('job/createJob', createJobThunk);
+
+export const deleteJob = createAsyncThunk('job/deleteJob', deleteJobThunk);
+
+export const editJob = createAsyncThunk('job/editJob', editJobThunk);
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 ```
 
 #### 70) AuthHeader - File Approach
@@ -2577,7 +3281,11 @@ const authHeader = (thunkAPI) => {
 
 export const createJobThunk = async (job, thunkAPI) => {
   try {
+<<<<<<< HEAD
     const resp = await customFetch.post("/jobs", job, authHeader(thunkAPI));
+=======
+    const resp = await customFetch.post('/jobs', job, authHeader(thunkAPI));
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     thunkAPI.dispatch(clearValues());
     return resp.data;
   } catch (error) {
@@ -2605,7 +3313,11 @@ export default authHeader;
 jobThunk.js
 
 ```js
+<<<<<<< HEAD
 import authHeader from "../../utils/authHeader";
+=======
+import authHeader from '../../utils/authHeader';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 ```
 
 #### 72) AuthHeader - Axios Interceptors Approach
@@ -2613,18 +3325,30 @@ import authHeader from "../../utils/authHeader";
 - utils/axios.js
 
 ```js
+<<<<<<< HEAD
 import axios from "axios";
 import { getUserFromLocalStorage } from "./localStorage";
 
 const customFetch = axios.create({
   baseURL: "https://jobify-prod.herokuapp.com/api/v1/toolkit",
+=======
+import axios from 'axios';
+import { getUserFromLocalStorage } from './localStorage';
+
+const customFetch = axios.create({
+  baseURL: 'https://jobify-prod.herokuapp.com/api/v1/toolkit',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 });
 
 customFetch.interceptors.request.use(
   (config) => {
     const user = getUserFromLocalStorage();
     if (user) {
+<<<<<<< HEAD
       config.headers["Authorization"] = `Bearer ${user.token}`;
+=======
+      config.headers['Authorization'] = `Bearer ${user.token}`;
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       // in the latest version "common" returns undefined
       // config.headers.common['Authorization'] = `Bearer ${user.token}`;
     }
@@ -2651,6 +3375,7 @@ Register.js
 
 ```js
 <button
+<<<<<<< HEAD
   type="button"
   className="btn btn-block btn-hipster"
   disabled={isLoading}
@@ -2659,6 +3384,16 @@ Register.js
   }}
 >
   {isLoading ? "loading..." : "demo"}
+=======
+  type='button'
+  className='btn btn-block btn-hipster'
+  disabled={isLoading}
+  onClick={() => {
+    dispatch(loginUser({ email: 'testUser@test.com', password: 'secret' }));
+  }}
+>
+  {isLoading ? 'loading...' : 'demo'}
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 </button>
 ```
 
@@ -2716,10 +3451,17 @@ export const showStats = createAsyncThunk(
 Stats.js
 
 ```js
+<<<<<<< HEAD
 import { useEffect } from "react";
 import { StatsContainer, Loading, ChartsContainer } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
 import { showStats } from "../../features/allJobs/allJobsSlice";
+=======
+import { useEffect } from 'react';
+import { StatsContainer, Loading, ChartsContainer } from '../../components';
+import { useDispatch, useSelector } from 'react-redux';
+import { showStats } from '../../features/allJobs/allJobsSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 const Stats = () => {
   const { isLoading, monthlyApplications } = useSelector(
     (store) => store.allJobs
@@ -2750,14 +3492,22 @@ export default Stats;
 StatsContainer.js
 
 ```js
+<<<<<<< HEAD
 import StatItem from "./StatItem";
 import { FaSuitcaseRolling, FaCalendarCheck, FaBug } from "react-icons/fa";
 import Wrapper from "../assets/wrappers/StatsContainer";
 import { useSelector } from "react-redux";
+=======
+import StatItem from './StatItem';
+import { FaSuitcaseRolling, FaCalendarCheck, FaBug } from 'react-icons/fa';
+import Wrapper from '../assets/wrappers/StatsContainer';
+import { useSelector } from 'react-redux';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 const StatsContainer = () => {
   const { stats } = useSelector((store) => store.allJobs);
   const defaultStats = [
     {
+<<<<<<< HEAD
       title: "pending applications",
       count: stats.pending || 0,
       icon: <FaSuitcaseRolling />,
@@ -2777,6 +3527,27 @@ const StatsContainer = () => {
       icon: <FaBug />,
       color: "#d66a6a",
       bcg: "#ffeeee",
+=======
+      title: 'pending applications',
+      count: stats.pending || 0,
+      icon: <FaSuitcaseRolling />,
+      color: '#e9b949',
+      bcg: '#fcefc7',
+    },
+    {
+      title: 'interviews scheduled',
+      count: stats.interview || 0,
+      icon: <FaCalendarCheck />,
+      color: '#647acb',
+      bcg: '#e0e8f9',
+    },
+    {
+      title: 'jobs declined',
+      count: stats.declined || 0,
+      icon: <FaBug />,
+      color: '#d66a6a',
+      bcg: '#ffeeee',
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     },
   ];
 
@@ -2797,16 +3568,27 @@ export default StatsContainer;
 StatItem.js
 
 ```js
+<<<<<<< HEAD
 import Wrapper from "../assets/wrappers/StatItem";
+=======
+import Wrapper from '../assets/wrappers/StatItem';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const StatItem = ({ count, title, icon, color, bcg }) => {
   return (
     <Wrapper color={color} bcg={bcg}>
       <header>
+<<<<<<< HEAD
         <span className="count">{count}</span>
         <span className="icon">{icon}</span>
       </header>
       <h5 className="title">{title}</h5>
+=======
+        <span className='count'>{count}</span>
+        <span className='icon'>{icon}</span>
+      </header>
+      <h5 className='title'>{title}</h5>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     </Wrapper>
   );
 };
@@ -2823,20 +3605,34 @@ export default StatItem;
 ChartsContainer.js
 
 ```js
+<<<<<<< HEAD
 import React, { useState } from "react";
 
 import BarChart from "./BarChart";
 import AreaChart from "./AreaChart";
 import Wrapper from "../assets/wrappers/ChartsContainer";
 import { useSelector } from "react-redux";
+=======
+import React, { useState } from 'react';
+
+import BarChart from './BarChart';
+import AreaChart from './AreaChart';
+import Wrapper from '../assets/wrappers/ChartsContainer';
+import { useSelector } from 'react-redux';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 const ChartsContainer = () => {
   const [barChart, setBarChart] = useState(true);
   const { monthlyApplications: data } = useSelector((store) => store.allJobs);
   return (
     <Wrapper>
       <h4>Monthly Applications</h4>
+<<<<<<< HEAD
       <button type="button" onClick={() => setBarChart(!barChart)}>
         {barChart ? "Area Chart" : "Bar Chart"}
+=======
+      <button type='button' onClick={() => setBarChart(!barChart)}>
+        {barChart ? 'Area Chart' : 'Bar Chart'}
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       </button>
       {barChart ? <BarChart data={data} /> : <AreaChart data={data} />}
     </Wrapper>
@@ -2881,6 +3677,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+<<<<<<< HEAD
 } from "recharts";
 
 const AreaChartComponent = ({ data }) => {
@@ -2892,6 +3689,19 @@ const AreaChartComponent = ({ data }) => {
         <YAxis allowDecimals={false} />
         <Tooltip />
         <Area type="monotone" dataKey="count" stroke="#1e3a8a" fill="#3b82f6" />
+=======
+} from 'recharts';
+
+const AreaChartComponent = ({ data }) => {
+  return (
+    <ResponsiveContainer width='100%' height={300}>
+      <AreaChart data={data} margin={{ top: 50 }}>
+        <CartesianGrid strokeDasharray='3 3' />
+        <XAxis dataKey='date' />
+        <YAxis allowDecimals={false} />
+        <Tooltip />
+        <Area type='monotone' dataKey='count' stroke='#1e3a8a' fill='#3b82f6' />
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       </AreaChart>
     </ResponsiveContainer>
   );
@@ -2911,6 +3721,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+<<<<<<< HEAD
 } from "recharts";
 
 const BarChartComponent = ({ data }) => {
@@ -2922,6 +3733,19 @@ const BarChartComponent = ({ data }) => {
         <YAxis allowDecimals={false} />
         <Tooltip />
         <Bar dataKey="count" fill="#3b82f6" barSize={75} />
+=======
+} from 'recharts';
+
+const BarChartComponent = ({ data }) => {
+  return (
+    <ResponsiveContainer width='100%' height={300}>
+      <BarChart data={data} margin={{ top: 50 }}>
+        <CartesianGrid strokeDasharray='3 3 ' />
+        <XAxis dataKey='date' />
+        <YAxis allowDecimals={false} />
+        <Tooltip />
+        <Bar dataKey='count' fill='#3b82f6' barSize={75} />
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       </BarChart>
     </ResponsiveContainer>
   );
@@ -2935,9 +3759,15 @@ export default BarChartComponent;
 SearchContainer.js
 
 ```js
+<<<<<<< HEAD
 import { FormRow, FormRowSelect } from ".";
 import Wrapper from "../assets/wrappers/SearchContainer";
 import { useSelector, useDispatch } from "react-redux";
+=======
+import { FormRow, FormRowSelect } from '.';
+import Wrapper from '../assets/wrappers/SearchContainer';
+import { useSelector, useDispatch } from 'react-redux';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const SearchContainer = () => {
   const { isLoading, search, searchStatus, searchType, sort, sortOptions } =
@@ -2950,6 +3780,7 @@ const SearchContainer = () => {
   };
   return (
     <Wrapper>
+<<<<<<< HEAD
       <form className="form">
         <h4>search form</h4>
         <div className="form-center">
@@ -2958,11 +3789,22 @@ const SearchContainer = () => {
           <FormRow
             type="text"
             name="search"
+=======
+      <form className='form'>
+        <h4>search form</h4>
+        <div className='form-center'>
+          {/* search position */}
+
+          <FormRow
+            type='text'
+            name='search'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             value={search}
             handleChange={handleSearch}
           />
           {/* search by status */}
           <FormRowSelect
+<<<<<<< HEAD
             labelText="status"
             name="searchStatus"
             value={searchStatus}
@@ -2980,12 +3822,35 @@ const SearchContainer = () => {
           {/* sort */}
           <FormRowSelect
             name="sort"
+=======
+            labelText='status'
+            name='searchStatus'
+            value={searchStatus}
+            handleChange={handleSearch}
+            list={['all', ...statusOptions]}
+          />
+          {/* search by type */}
+          <FormRowSelect
+            labelText='type'
+            name='searchType'
+            value={searchType}
+            handleChange={handleSearch}
+            list={['all', ...jobTypeOptions]}
+          />
+          {/* sort */}
+          <FormRowSelect
+            name='sort'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             value={sort}
             handleChange={handleSearch}
             list={sortOptions}
           />
           <button
+<<<<<<< HEAD
             className="btn btn-block btn-danger"
+=======
+            className='btn btn-block btn-danger'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             disabled={isLoading}
             onClick={handleSubmit}
           >
@@ -3022,7 +3887,11 @@ export const { showLoading, hideLoading, handleChange, clearFilters } =
 SearchContainer.js
 
 ```js
+<<<<<<< HEAD
 import { handleChange, clearFilters } from "../features/allJobs/allJobsSlice";
+=======
+import { handleChange, clearFilters } from '../features/allJobs/allJobsSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const handleSearch = (e) => {
   if (isLoading) return;
@@ -3067,9 +3936,15 @@ const { jobs, isLoading, page, totalJobs, numOfPages } = useSelector(
 return (
   <Wrapper>
     <h5>
+<<<<<<< HEAD
       {totalJobs} job{jobs.length > 1 && "s"} found
     </h5>
     <div className="jobs">
+=======
+      {totalJobs} job{jobs.length > 1 && 's'} found
+    </h5>
+    <div className='jobs'>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
       {jobs.map((job) => {
         return <Job key={job._id} {...job} />;
       })}
@@ -3084,9 +3959,15 @@ return (
 [JS Nuggets - Array.from()](https://youtu.be/zg1Bv4xubwo)
 
 ```js
+<<<<<<< HEAD
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
 import Wrapper from "../assets/wrappers/PageBtnContainer";
 import { useSelector, useDispatch } from "react-redux";
+=======
+import { HiChevronDoubleLeft, HiChevronDoubleRight } from 'react-icons/hi';
+import Wrapper from '../assets/wrappers/PageBtnContainer';
+import { useSelector, useDispatch } from 'react-redux';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 const PageBtnContainer = () => {
   const { numOfPages, page } = useSelector((store) => store.allJobs);
   const dispatch = useDispatch();
@@ -3098,6 +3979,7 @@ const PageBtnContainer = () => {
   const prevPage = () => {};
   return (
     <Wrapper>
+<<<<<<< HEAD
       <button className="prev-btn" onClick={prevPage}>
         <HiChevronDoubleLeft />
         prev
@@ -3110,13 +3992,31 @@ const PageBtnContainer = () => {
               className={pageNumber === page ? "pageBtn active" : "pageBtn"}
               key={pageNumber}
               onClick={() => console.log("change page")}
+=======
+      <button className='prev-btn' onClick={prevPage}>
+        <HiChevronDoubleLeft />
+        prev
+      </button>
+      <div className='btn-container'>
+        {pages.map((pageNumber) => {
+          return (
+            <button
+              type='button'
+              className={pageNumber === page ? 'pageBtn active' : 'pageBtn'}
+              key={pageNumber}
+              onClick={() => console.log('change page')}
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             >
               {pageNumber}
             </button>
           );
         })}
       </div>
+<<<<<<< HEAD
       <button className="next-btn" onClick={nextPage}>
+=======
+      <button className='next-btn' onClick={nextPage}>
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
         next
         <HiChevronDoubleRight />
       </button>
@@ -3149,7 +4049,11 @@ export const {
 PageBtnContainer.js
 
 ```js
+<<<<<<< HEAD
 import { changePage } from "../features/allJobs/allJobsSlice";
+=======
+import { changePage } from '../features/allJobs/allJobsSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 const nextPage = () => {
   let newPage = page + 1;
@@ -3167,12 +4071,21 @@ const prevPage = () => {
 };
 
 return (
+<<<<<<< HEAD
   <div className="btn-container">
     {pages.map((pageNumber) => {
       return (
         <button
           type="button"
           className={pageNumber === page ? "pageBtn active" : "pageBtn"}
+=======
+  <div className='btn-container'>
+    {pages.map((pageNumber) => {
+      return (
+        <button
+          type='button'
+          className={pageNumber === page ? 'pageBtn active' : 'pageBtn'}
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
           key={pageNumber}
           onClick={() => dispatch(changePage(pageNumber))}
         >
@@ -3256,7 +4169,11 @@ const handleSearch = (e) => {
 - features/allJobs/allJobsThunk.js
 
 ```js
+<<<<<<< HEAD
 import customFetch from "../../utils/axios";
+=======
+import customFetch from '../../utils/axios';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 export const getAllJobsThunk = async (thunkAPI) => {
   const { page, search, searchStatus, searchType, sort } =
@@ -3277,7 +4194,11 @@ export const getAllJobsThunk = async (thunkAPI) => {
 
 export const showStatsThunk = async (_, thunkAPI) => {
   try {
+<<<<<<< HEAD
     const resp = await customFetch.get("/jobs/stats");
+=======
+    const resp = await customFetch.get('/jobs/stats');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     return resp.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.msg);
@@ -3288,10 +4209,17 @@ export const showStatsThunk = async (_, thunkAPI) => {
 allJobsSlice.js
 
 ```js
+<<<<<<< HEAD
 import { showStatsThunk, getAllJobsThunk } from "./allJobsThunk";
 
 export const getAllJobs = createAsyncThunk("allJobs/getJobs", getAllJobsThunk);
 export const showStats = createAsyncThunk("allJobs/showStats", showStatsThunk);
+=======
+import { showStatsThunk, getAllJobsThunk } from './allJobsThunk';
+
+export const getAllJobs = createAsyncThunk('allJobs/getJobs', getAllJobsThunk);
+export const showStats = createAsyncThunk('allJobs/showStats', showStatsThunk);
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 ```
 
 #### 90) Clear Store - Setup
@@ -3309,9 +4237,15 @@ reducers:{
 userThunk.js
 
 ```js
+<<<<<<< HEAD
 import { logoutUser } from "./userSlice";
 import { clearAllJobsState } from "../allJobs/allJobsSlice";
 import { clearValues } from "../job/jobSlice";
+=======
+import { logoutUser } from './userSlice';
+import { clearAllJobsState } from '../allJobs/allJobsSlice';
+import { clearValues } from '../job/jobSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 export const clearStoreThunk = async (message, thunkAPI) => {
   try {
@@ -3345,6 +4279,7 @@ extraReducers:{
 Navbar.js
 
 ```js
+<<<<<<< HEAD
 import { clearStore } from "../features/user/userSlice";
 
 return (
@@ -3353,6 +4288,16 @@ return (
     className="dropdown-btn"
     onClick={() => {
       dispatch(clearStore("Logout Successful..."));
+=======
+import { clearStore } from '../features/user/userSlice';
+
+return (
+  <button
+    type='button'
+    className='dropdown-btn'
+    onClick={() => {
+      dispatch(clearStore('Logout Successful...'));
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     }}
   >
     logout
@@ -3365,12 +4310,20 @@ return (
 axios.js
 
 ```js
+<<<<<<< HEAD
 import { clearStore } from "../features/user/userSlice";
+=======
+import { clearStore } from '../features/user/userSlice';
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
 export const checkForUnauthorizedResponse = (error, thunkAPI) => {
   if (error.response.status === 401) {
     thunkAPI.dispatch(clearStore());
+<<<<<<< HEAD
     return thunkAPI.rejectWithValue("Unauthorized! Logging Out...");
+=======
+    return thunkAPI.rejectWithValue('Unauthorized! Logging Out...');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
   }
   return thunkAPI.rejectWithValue(error.response.data.msg);
 };
@@ -3379,11 +4332,19 @@ export const checkForUnauthorizedResponse = (error, thunkAPI) => {
 allJobsThunk.js
 
 ```js
+<<<<<<< HEAD
 import customFetch, { checkForUnauthorizedResponse } from "../../utils/axios";
 
 export const showStatsThunk = async (_, thunkAPI) => {
   try {
     const resp = await customFetch.get("/jobs/stats");
+=======
+import customFetch, { checkForUnauthorizedResponse } from '../../utils/axios';
+
+export const showStatsThunk = async (_, thunkAPI) => {
+  try {
+    const resp = await customFetch.get('/jobs/stats');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     return resp.data;
   } catch (error) {
     return checkForUnauthorizedResponse(error, thunkAPI);
@@ -3527,10 +4488,17 @@ userSlice.js
 - replace search input functionality so it updates localSearch
 
 ```js
+<<<<<<< HEAD
 import { useState, useMemo } from "react";
 
 const SearchContainer = () => {
   const [localSearch, setLocalSearch] = useState("");
+=======
+import { useState, useMemo } from 'react';
+
+const SearchContainer = () => {
+  const [localSearch, setLocalSearch] = useState('');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
   const handleSearch = (e) => {
     dispatch(handleChange({ name: e.target.name, value: e.target.value }));
@@ -3538,6 +4506,7 @@ const SearchContainer = () => {
 
   return (
     <Wrapper>
+<<<<<<< HEAD
       <form className="form">
         <h4>search form</h4>
         <div className="form-center">
@@ -3545,6 +4514,15 @@ const SearchContainer = () => {
           <FormRow
             type="text"
             name="search"
+=======
+      <form className='form'>
+        <h4>search form</h4>
+        <div className='form-center'>
+          {/* search position */}
+          <FormRow
+            type='text'
+            name='search'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             value={localSearch}
             handleChange={(e) => setLocalSearch(e.target.value)}
           />
@@ -3560,10 +4538,17 @@ export default SearchContainer;
 #### Setup Debounce
 
 ```js
+<<<<<<< HEAD
 import { useState, useMemo } from "react";
 
 const SearchContainer = () => {
   const [localSearch, setLocalSearch] = useState("");
+=======
+import { useState, useMemo } from 'react';
+
+const SearchContainer = () => {
+  const [localSearch, setLocalSearch] = useState('');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
 
   const handleSearch = (e) => {
     dispatch(handleChange({ name: e.target.name, value: e.target.value }));
@@ -3582,7 +4567,11 @@ const SearchContainer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     setLocalSearch("");
+=======
+    setLocalSearch('');
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
     dispatch(clearFilters());
   };
 
@@ -3590,6 +4579,7 @@ const SearchContainer = () => {
 
   return (
     <Wrapper>
+<<<<<<< HEAD
       <form className="form">
         <h4>search form</h4>
         <div className="form-center">
@@ -3597,6 +4587,15 @@ const SearchContainer = () => {
           <FormRow
             type="text"
             name="search"
+=======
+      <form className='form'>
+        <h4>search form</h4>
+        <div className='form-center'>
+          {/* search position */}
+          <FormRow
+            type='text'
+            name='search'
+>>>>>>> 1c1d9b57f6d9e729dac4141caad3697782086d06
             value={localSearch}
             handleChange={optimizedDebounce}
           />
