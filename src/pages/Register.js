@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import Wrapper from "../assets/wrappers/RegisterPage";
 import { FormRow, Logo } from '../components';
 import { toast } from 'react-toastify';
 import { loginUser, registerUser } from '../features/user/userSlice';
+import { useNavigate } from 'react-router-dom';
 function Register() {
   const initialState = {
     name: "",
@@ -14,6 +15,16 @@ function Register() {
   const dispatch = useDispatch();
   const { isLoading, user } = useSelector((store) => store.user);
   const [value, setValue] = useState(initialState);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate("/")
+      }, 2000)
+    }
+  }, [user])
+
   const onSubmit = (e) => {
     e.preventDefault();
     const { name, email, password, isMember } = value;

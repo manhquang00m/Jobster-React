@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { toast } from "react-toastify"
 import customFetch from "../../ultils/axios";
-
+import { getUserFromLocalStorage, addUserToLocalStorage, removeUserFromLocalStorage } from "../../ultils/localStorage";
 export const registerUser = createAsyncThunk(
     'user/registerUser',
     async (user, thunkAPI) => {
@@ -29,7 +29,7 @@ export const loginUser = createAsyncThunk(
 
 const initialState = {
     isLoading: false,
-    user: null,
+    user: getUserFromLocalStorage(),
 };
 
 // Slice: mô tả 1 module trong state, dùng slice để chia nhỏ state
@@ -37,6 +37,12 @@ const initialState = {
 const userSlice = createSlice({
     name: 'user',
     initialState,
+    reducers: {
+        logoutUser: (state) => {
+            state.user = null
+            removeUserFromLocalStorage()
+        }
+    },
     extraReducers: {
         [registerUser.pending]: (state) => {
             state.isLoading = true
@@ -56,6 +62,7 @@ const userSlice = createSlice({
         [loginUser.fulfilled]: (state, { payload }) => {
             state.isLoading = false
             state.user = payload.user
+            addUserToLocalStorage(payload.user)
             toast.success(`Welcome ${payload.user.name}`)
         },
         [loginUser.rejected]: (state, { payload }) => {
@@ -64,5 +71,5 @@ const userSlice = createSlice({
         }
     }
 });
-
+export const { logoutUser } = userSlice.actions
 export default userSlice.reducer;
