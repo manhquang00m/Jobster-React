@@ -15,7 +15,7 @@ function SmallSideBar() {
     }
     return (
         <Wrapper>
-            <div className={!isSidebarOpen ? "sidebar-container show-sidebar" : "sidebar-container"}>
+            <div className={isSidebarOpen ? "sidebar-container show-sidebar" : "sidebar-container"}>
                 <div className="content">
                     <button className="close-btn" onClick={handleToggleSidebar}>
                         <FaTimes />
@@ -23,7 +23,7 @@ function SmallSideBar() {
                     <header>
                         <Logo />
                     </header>
-                    <NavLinks toggleSidebar={handleToggleSidebar} />
+                    <NavLinks toggle={handleToggleSidebar} />
                 </div>
             </div>
         </Wrapper>
