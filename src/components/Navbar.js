@@ -3,7 +3,7 @@ import Wrapper from '../assets/wrappers/Navbar'
 import { FaAlignLeft, FaUserCircle, FaCaretDown } from "react-icons/fa";
 import Logo from './Logo';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
-import { logoutUser } from '../features/user/userSlice';
+import { logoutUser, toggleSidebar } from '../features/user/userSlice';
 function Navbar() {
     const [isShowLogout, setShowLogout] = useState(false)
     const { user } = useSelector(state => state.user)
@@ -17,7 +17,7 @@ function Navbar() {
                 <button
                     type="button"
                     className="toggle-btn"
-                    onClick={() => console.log("toggle sidebar")}
+                    onClick={() => dispatch(toggleSidebar())}
                 >
                     <FaAlignLeft />
                 </button>

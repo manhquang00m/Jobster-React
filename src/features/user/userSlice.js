@@ -30,6 +30,7 @@ export const loginUser = createAsyncThunk(
 const initialState = {
     isLoading: false,
     user: getUserFromLocalStorage(),
+    isSidebarOpen: true,
 };
 
 // Slice: mô tả 1 module trong state, dùng slice để chia nhỏ state
@@ -41,6 +42,9 @@ const userSlice = createSlice({
         logoutUser: (state) => {
             state.user = null
             removeUserFromLocalStorage()
+        },
+        toggleSidebar: (state) => {
+            state.isSidebarOpen = !state.isSidebarOpen;
         }
     },
     extraReducers: {
@@ -71,5 +75,5 @@ const userSlice = createSlice({
         }
     }
 });
-export const { logoutUser } = userSlice.actions
+export const { logoutUser, toggleSidebar } = userSlice.actions
 export default userSlice.reducer;

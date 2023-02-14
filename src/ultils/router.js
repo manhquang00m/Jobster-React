@@ -9,13 +9,16 @@ import Stats from "../pages/dashbroad/Stats";
 import Alljobs from "../pages/dashbroad/Alljobs";
 import Addjob from "../pages/dashbroad/Addjob";
 import Profile from "../pages/dashbroad/Profile";
+import ProtectedRoute from "../pages/ProtectedRoute";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Dashbroad></Dashbroad>,
+        element: <ProtectedRoute>
+            <Dashbroad></Dashbroad>
+        </ProtectedRoute>,
         children: [
             {
-                path: 'stats',
+                path: '/',
                 element: <Stats></Stats>
             },
             {
